@@ -21,7 +21,7 @@
     --Light-royal-blue : hsl(241, 81%, 54%);
 
     --Violet-blue: hsla(256, 72%, 46%, 1);
-    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --Persian-blue: #303b59;
 
 }
 body{
@@ -34,7 +34,9 @@ body{
     height: 100vh;
 }
 .l-card__wrapper{
+    border-radius: 16px;
     display: flex;
+    box-shadow: 10px 15px 50px var(--Light-lavender);
 }
 .l-result__wrapper{
     border-radius: 16px;
@@ -80,4 +82,97 @@ body{
     font-size: 19px;
     color: var(--Light-lavender);
     text-align: center;
+}
+.l-sumary__wrapper{
+    width: 375px;
+    padding: 45px;
+}
+.c-h2{
+    font-size: 22px;
+    font-weight:600;
+    color: var(--Dark-gray-blue);
+}
+.l-fields{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.l-reaction__field, .l-memory___field, .l-verbal__field, .l-visual__field{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border-radius: 16px;
+}
+.l-fields__text-results{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+img{
+    margin-right: 16px;
+}
+.c-results{
+    margin-left: 16px;
+    color: var(--Dark-gray-blue);
+}
+strong{
+    color: black;
+}
+.l-reaction__field{
+    background:#fff6f5;
+}
+.c-reaction__text{
+    color: #dd8787;
+}
+.l-memory___field{
+    background: #fffbf2 ;
+}
+.c-memory__text{
+    color: #e5b248;
+}
+.l-verbal__field{
+    background: #f2fbfa;
+}
+.c-verbal__text{
+    color: #30a986;
+}
+.l-visual__field{
+    background: #f3f3fd;
+}
+.c-visual__text{
+    color: #1a269d;
+}
+.c-button{
+    width: 100%;
+    border-radius: 90px;
+    padding: 20px 0;
+    border: none;
+    background: var(--Persian-blue);
+ 
+    cursor: pointer;
+}
+.c-button__text{
+    color: var(--White);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: var(--principal-font);
+}
+.c-button:hover{
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%),  hsl(241, 81%, 54%)); 
+    transition: all 5s ease-in;
+}
+
+@media screen and (max-width:375px) {
+    .l-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .l-card__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
 }
